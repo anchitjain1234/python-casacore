@@ -1,17 +1,14 @@
-language: python
+language: generic
 sudo: true
 os:
  - linux
  - osx
-python:
- - '2.6'
- - '2.7'
 before_install:
  - ./.travis/before_install.sh
 install:
  - python setup.py develop
 script:
- - nosetests
+ - tox
 deploy:
   provider: pypi
   user: gijzelaerr

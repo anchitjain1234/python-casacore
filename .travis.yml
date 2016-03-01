@@ -6,7 +6,7 @@ os:
 before_install:
  - ./.travis/before_install.sh
 install:
- - python setup.py develop
+ - sudo pip install -e .
 script:
  - tox
 deploy:

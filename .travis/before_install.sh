@@ -6,6 +6,7 @@ set -x
 if [ "$TRAVIS_OS_NAME" = osx ]; then
     brew update >/dev/null
     brew tap homebrew/science
+    brew tap ska-sa/tap
     curl -L -O https://bintray.com/artifact/download/casacore/homebrew-bottles/casacore-2.0.3.el_capitan.bottle.tar.gz
     brew install ./casacore-2.0.3.el_capitan.bottle.tar.gz
     brew install python python3 
@@ -17,5 +18,5 @@ else
    sudo apt-get install libcasacore2-dev casacore-data python-pip python3
 fi
 
-pip install --upgrade pip
-pip install tox
+sudo pip install --upgrade pip
+sudo pip install tox
